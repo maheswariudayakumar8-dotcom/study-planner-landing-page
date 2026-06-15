@@ -15,6 +15,11 @@ A responsive landing page built using HTML5 and CSS3.
 - Flexbox
 - Media Queries
 
+## What I learned
+- How to build responsive layout
+- How to use Flexbox
+- Basic Git & GitHub workflow  
+
 ## Author
 Bhavani U
 # study-planner-landing-page
