@@ -17,3 +17,4 @@ A responsive landing page built using HTML5 and CSS3.
 
 ## Author
 Bhavani U
+# study-planner-landing-page
