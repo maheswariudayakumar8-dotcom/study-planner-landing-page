@@ -28,3 +28,31 @@ toggleBtn.addEventListener("click", function () {
 if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark");
 }
+document.getElementById("loadPosts").addEventListener("click", function () {
+
+    const container = document.getElementById("postContainer");
+
+    container.innerHTML = "<p>Loading...</p>";
+
+    fetch("https://jsonplaceholder.typicode.com/posts?_limit=3")
+        .then(response => response.json())
+        .then(data => {
+
+            container.innerHTML = "";
+
+            data.forEach(post => {
+
+                container.innerHTML += `
+                    <div class="post">
+                        <h3>${post.title}</h3>
+                        <p>${post.body}</p>
+                    </div>
+                `;
+            });
+
+        })
+        .catch(() => {
+            container.innerHTML = "<p>Error loading data.</p>";
+        });
+
+});
